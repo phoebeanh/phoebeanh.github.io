@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+        <title>Portfolio</title>
+        <link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="stylesheets/portfolio.css" /></noscript>
+    </head>
+
+    <body>
+        <div class="row">
+            <div class="column">
+                <img src="images/Clover1.png" alt="Clover" onclick="myFunction(this);">
+            </div>
+            <div class="column">
+                <img src="images/Commission.jpg" alt="Moira" onclick="myFunction(this);">
+            </div>
+            <!-- <div class="column">
+                <img src="img_mountains.jpg" alt="Mountains" onclick="myFunction(this);">
+            </div>
+            <div class="column">
+                <img src="img_lights.jpg" alt="Lights" onclick="myFunction(this);">
+            </div> -->
+        </div>
+
+        <div class="container">
+                <!-- Close the image -->
+                <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+              
+                <!-- Expanded image -->
+                <img id="expandedImg" style="width:100%">
+              
+                <!-- Image text -->
+                <div id="imgtext"></div>
+              </div>
+    </body>
+</html>
