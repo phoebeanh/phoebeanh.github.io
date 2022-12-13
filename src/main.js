@@ -5,7 +5,13 @@ import ArticleData from './data/ArticleData.js'
 
 createApp({
   components: {
-    NavigationBar,
+    NavigationBar
+  }
+}).mount('#app')
+
+
+createApp({
+  components: {
     ArticleItem
   },
   data() {
@@ -13,4 +19,4 @@ createApp({
       ArticleData
     }
   }
-}).mount('#app')
+}).mount('#articles')

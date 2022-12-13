@@ -175,6 +175,29 @@ footer {
     z-index: 1;
 }
 
+/*------------ Articles------------*/
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  background-color: #f3f3f3;
+  transition: 0.3s ease-in-out;
+  border-radius: 6px;
+  padding: 2px 12px;
+  margin: 16px;
+}
+
+.card a {
+    text-decoration: none;
+}
+
+.card h2:hover {
+    transition: 0.3s;
+    color: #d7c1ed;
+}
+
+.card img {
+    width: 30px;
+}
+
 /* On screens that are 1100px or less, set display to block*/
 @media screen and (max-width:1100px) {
     div.intro, div.about-content {

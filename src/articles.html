@@ -18,12 +18,12 @@
         <!--Main Content-->
         <main>
             <h2>Articles</h2>
-                <div id="app">
-                    <article-item class="item" :model="articleData"></tree-item>
-              </div>
+            <div id="articles">
+                <article-item 
+                v-for="item in ArticleData"
+                :article="item"
+                :key="item.title"></article-item>
             </div>
-
-            
         </main>
         <footer>
             Copyright Phoebe Ngo 2022.
