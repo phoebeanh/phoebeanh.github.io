@@ -8,12 +8,12 @@ export default {
           <h1 :class="headerClass">Phoebe Ngo</h1>
           <!--Navigation Bar-->
           <nav>
-            <a href="index.html">Home</a>
-            <a href="articles.html">Articles</a>
-            <a href="portfolio.html">Portfolio</a>
-            <a href="photography.html">Photography</a>
-            <a href="resume.html">Resume</a>
-            <a href="aboutme.html">About</a>
+            <a href="../index.html">Home</a>
+            <a href="/src/articles.html">Articles</a>
+            <a href="/src/portfolio.html">Portfolio</a>
+            <a href="/src/photography.html">Photography</a>
+            <a href="/src/resume.html">Resume</a>
+            <a href="/src/aboutme.html">About</a>
           </nav>
         </header>`
         
