@@ -151,6 +151,11 @@ footer {
     margin-bottom: 0;
 }
 
+.splash-left img:hover {
+    transition: 0.3s;
+    opacity: 50%;
+}
+
 .splash-left h4 {
     color: #756486;
     margin-top: -8px;
@@ -197,6 +202,8 @@ footer {
 .card img {
     width: 30px;
 }
+
+/*------------ Media------------*/
 
 /* On screens that are 1100px or less, set display to block*/
 @media screen and (max-width:1100px) {
