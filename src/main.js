@@ -1,0 +1,16 @@
+const {createApp} = Vue
+import NavigationBar from './components/NavigationBar.js'
+import ArticleItem from './components/ArticleItem.js'
+import ArticleData from './data/ArticleData.js'
+
+createApp({
+  components: {
+    NavigationBar,
+    ArticleItem
+  },
+  data() {
+    return {
+      ArticleData
+    }
+  }
+}).mount('#app')
