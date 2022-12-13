@@ -1,0 +1,238 @@
+/*------------ General ------------*/
+
+head {
+    display: none;
+}
+
+body {
+    margin: 0;
+    background-color: #fcfcfc;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    
+}
+
+/*------------ Headers------------*/
+header h1 {
+    padding: 0;
+    height: auto;
+    color: white;
+    background: none;
+    align-items: center;
+    align-self: center;
+}
+
+.splash-header {
+    color: #a18eb4;
+    background: none;
+}
+
+h2, h3 {
+    color: #a18eb4;
+}
+
+header {
+    padding: 4px;
+    max-height: 50px;
+    background: #a18eb4;
+    position: sticky;
+    top:0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+/*------------ Navigation--------------*/
+nav {
+    background: none;
+    flex-direction: row;
+    align-items: center;
+    align-self: center;
+    max-height: 15px;
+}
+
+nav a {
+    background: none;
+    color: #fcfcfc;
+    font: menu;
+    text-decoration: none;
+    padding: 8px;
+    font-size: 12px;
+}
+
+nav a:hover {
+    color: #756486;
+}
+
+/*------------ Portfolio Gallery ------------*/
+.portfolio-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+}
+
+.portfolio-gallery img {
+    max-width: 350px;
+    padding-right: 2em;
+}
+
+/*------------ Table ------------*/
+table {
+    margin: 16px;
+    display: flex;
+    align-self: center;
+}
+
+td {
+    padding-right: 2em;
+}
+
+.table-header > td {
+    font-weight: bold;
+}
+
+/*------------ Main & Footer------------*/
+main, footer, nav {
+    margin: 8px;
+}
+
+main {
+    flex: 1 1 0;
+    flex-wrap: wrap;
+}
+
+footer {
+    flex: 0 0 content;
+    display: flex;
+    justify-content: flex-end;
+    font-style: italic;
+    bottom: 0;
+    right: 0;
+}
+
+/*------------ Images------------*/
+
+.profile-img {
+    border-radius: 50%;
+    max-width: 350px;
+    max-height: 350px;
+}
+
+.about-img {
+    border-radius: 50%;
+    margin-right: 4em;
+    min-width: 250px;
+    max-width: 250px;
+    max-height: 270px;
+}
+
+/*------------ About Me------------*/
+
+.about-content {
+    padding: 8px;
+    display: flex;
+    flex-flow: row;
+}
+
+/*------------ Splash Screen------------*/
+
+.splash-left {
+    width: 50%;
+    min-height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.splash-left .splash-header {
+    font-size: 84px;
+    margin-bottom: 0;
+}
+
+.splash-left h4 {
+    color: #756486;
+    margin-top: -8px;
+}
+
+.splash-right {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 50%;
+    opacity: 1;
+    background: #a18eb4;
+    z-index: -1;
+}
+
+.splash-right .splash-photo {
+    position: absolute;
+    right: 25%;
+    bottom: 0;
+    width: 50%;
+    z-index: 1;
+}
+
+/* On screens that are 1100px or less, set display to block*/
+@media screen and (max-width:1100px) {
+    div.intro, div.about-content {
+        display: block;
+        overflow: hidden
+    }
+}
+
+/*Tablets*/
+@media screen and (max-width:800px) {
+    div.intro, div.about-content {
+        display: block;
+    }
+
+    .splash-left .splash-header {
+        font-size: 48px;
+        margin-bottom: 0;
+    }
+
+    h1 {
+        max-height: 15vh;
+    }
+
+    iframe {
+        max-width: 400px;
+    }
+
+    
+}
+
+/* Mobile*/
+@media screen and (max-width:450px) {
+    div.intro, div.about-content {
+        display: block;
+        overflow: hidden
+    }
+
+    h1 {
+        max-height: 15vh;
+    }
+
+    .splash-left .splash-header {
+        font-size: 32px;
+        margin-bottom: 0;
+    }
+
+    .portfolio-gallery {
+        display: grid;
+        flex-wrap: nowrap;
+        grid-gap: .5rem;
+    }
+
+    .portfolio-gallery img {
+        max-width: 250px;
+    }
+
+    iframe {
+        max-width: 350px;
+    }
+}
+

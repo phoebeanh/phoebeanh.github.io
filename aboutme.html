@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="./main.css">
+        <meta charset="UTF-8">
+        <title>About Me</title>
+        <!--Importing Vue-->
+        <script src="https://unpkg.com/vue@next"></script>
+        <!--Importing Javascript-->
+        <script src="./main.js" type="module"></script>
+    </head>
+    <body>
+        <!--Main Header of Page-->
+        <div id="app">
+            <navigation-bar/>
+        </div>
+
+        <!--Main Content-->
+        <main>
+            <h2>About Me</h2>
+            <div class="about-content">
+                <img class="about-img" alt="A picture of Phoebe sitting in front of a canyon at Zion National Park. She is wearing a green backpack and a grey jacket."
+                src="https://phoebeferrata.files.wordpress.com/2021/05/img_6834.jpg" height="450" width="350">
+                <article>
+                    <h3>Welcome!</h3>
+                    <p>
+                        My name is Phoebe Ngo. I live in Seattle, WA. I am a second year graduate student
+                        at the Boston University, beginning my degree in the fall of 2020. 
+                        I am studying to get my Masters degree in Software Development.
+                        I am passionate about learning how I can use my creativity in the world of web application development.
+                    </p>
+                    <p>
+                        I am taking this CS601 because I am interested in becoming a UX/UI Designer. I am currently primarily a backend software developer,
+                        but I have learned that backend software is not where my passion lies. Designing delightful interfaces and experiences for users is where
+                        I find the most value in my work, so I hope to expand my repertoire of skills in HTML, CSS and Javascript in this class.
+                        So far in my academic and professional careers, I have focused on my algorithmic, backend, and database design skills, so I hope to add some 
+                        frontend knowledge to my skillset.
+                    </p>
+
+                    <h3>Demographics</h3>
+                    <table>
+                        <tr class="table-header">
+                           <td>Birthplace</td>
+                           <td>Age</td>
+                           <td>Current City</td>
+                           <td>Alma Mater</td>
+                        </tr>
+                        
+                        <tr>
+                           <td>Atlanta, GA</td>
+                           <td>26</td>
+                           <td>Seattle, WA</td>
+                           <td>University of South Carolina</td>
+                        </tr>
+                     </table>
+
+                    <h3>What Inspires Me</h3>
+                    <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus efficitur felis in fringilla vestibulum. Pellentesque vitae lorem quis velit ornare fermentum. Suspendisse elementum mollis risus non pretium. Nullam tempor augue a magna ullamcorper interdum. Vestibulum elit justo, aliquam ut egestas ut, suscipit sed dolor. Ut vehicula cursus condimentum. Praesent purus orci, suscipit eu libero sed, lacinia rutrum odio. Fusce quis nunc in lectus rutrum commodo et vitae ex.
+                    </p><p>
+                    Ut vitae nunc velit. Aenean vel velit sit amet ipsum ultricies lacinia. Praesent blandit est eget risus suscipit, ac placerat risus ultricies. Nulla facilisi. Proin at mattis erat. Sed et felis tortor. Maecenas vehicula laoreet tellus, nec fringilla mauris luctus eu. Cras et ex nulla.
+                    </p><p>
+                    Donec at tellus ullamcorper, ullamcorper elit sed, fringilla ante. Nam sapien velit, hendrerit id mi in, congue fringilla mi. Mauris rutrum accumsan tellus non ultricies. Suspendisse pellentesque, risus id ornare tristique, ipsum ipsum efficitur arcu, non consectetur lectus elit at eros. Curabitur porta fringilla enim, dignissim pellentesque tellus scelerisque sed. Aliquam at pellentesque neque. Vivamus at arcu id nulla porta aliquet sit amet porta lorem. Proin eget ultricies leo. Aenean eros mauris, vestibulum vel pharetra at, volutpat sit amet justo.
+                    </p><p>
+                    Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Duis finibus faucibus sagittis. Sed sit amet turpis posuere nisi posuere scelerisque. Vivamus metus urna, mattis vitae est iaculis, viverra ullamcorper ipsum. Duis vulputate pretium eleifend. Ut maximus ac turpis sit amet condimentum. Duis vel libero justo. Praesent nisl eros, ullamcorper id leo eu, eleifend varius tortor. Suspendisse potenti. Suspendisse vitae aliquet nisi, ut vehicula leo. Nullam consequat neque nec mauris pharetra, eget rhoncus arcu imperdiet.
+                    </p><p>
+                    Praesent sed risus a velit placerat suscipit et at velit. Fusce volutpat faucibus est. Cras iaculis gravida tellus, a imperdiet massa imperdiet sed. Cras quis efficitur massa. Etiam vehicula sapien pretium, laoreet lorem nec, tempor ligula. Nunc facilisis leo a eros facilisis faucibus. Praesent lacinia, nibh id porta eleifend, metus metus tempor odio, id laoreet sapien elit in turpis. Quisque tincidunt tortor auctor, vestibulum magna a, semper nulla. Praesent auctor consectetur venenatis. Aliquam non nulla sodales, venenatis justo ac, blandit quam.
+                    </p>
+                   
+                    <h3>Current Hobbies</h3>
+                    <p>My current hobbies include: </p>
+                    <ul>
+                        <li>Mountaineering</li>
+                        <li>Hiking</li>
+                        <li>Backpacking</li>
+                        <li>Drawing</li>
+                        <li>Brewery/Cidery Hopping</li>
+                    </ul>
+
+                    <h3>About Mountaineering</h3>
+                    <p>
+                        I currently run a blog on my journey into learning more about the outdoor space. If you are interested in learning more, you may view my blog <a href="https://phoebeferrata.com/">here</a>. Below is a video detailing more about what mountaineering is.
+                        <br>
+                    </p>
+                    <p>
+                        <!--Video-->
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/jXNQ2A9RhLk" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+                    </p>
+                </article>
+            </div>
+        </main>
+        <footer>
+            Copyright Phoebe Ngo 2022.
+        </footer>
+    </body>
+    
+</html>
