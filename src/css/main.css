@@ -105,8 +105,9 @@ main {
 
 footer {
     flex: 0 0 content;
+    flex-direction: column;
     display: flex;
-    justify-content: flex-end;
+    align-items: flex-end;
     font-style: italic;
     bottom: 0;
     right: 0;
