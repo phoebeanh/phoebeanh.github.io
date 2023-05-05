@@ -9,11 +9,9 @@ export default {
           <!--Navigation Bar-->
           <nav>
             <a href="../index.html">Home</a>
-            <a href="/src/articles.html">Articles</a>
-            <a href="/src/portfolio.html">Portfolio</a>
-            <a href="/src/photography.html">Photography</a>
-            <a href="/src/resume.html">Resume</a>
-            <a href="/src/aboutme.html">About</a>
+            <a href="/src/coming-soon.html">About</a>
+            <a href="/src/coming-soon.html">My Projects</a>
+            <a href="/src/coming-soon.html">Resume</a>
           </nav>
         </header>`
         

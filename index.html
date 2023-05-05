@@ -2,35 +2,85 @@
 <html lang="en">
 <head>
     <link rel="stylesheet" href="./src/css/main.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" >
     <meta charset="UTF-8">
-    <title>METCS 601 Assignment 1</title>
     <!--Importing Vue-->
     <script src="https://unpkg.com/vue@next"></script>
     <!--Importing Javascript-->
     <script src="./src/main.js" type="module"></script>
-    
+    <title>Phoebe Ngo</title>
 </head>
 <body> 
     <div id="app">
-        <navigation-bar header-class="splash-header"/>
+    <!-- header-->
+    <navigation-bar header-class="splash-header"/>
+        
     </div>
     <!--Main Content of Page-->
     <main>
-        <div class="splash-left">
-            <span>
-                <h1 class="splash-header">Hi, I'm Phoebe.</h1>
-                <h4>UX/UI Designer and Developer</h4>
-                <a href="https://github.com/phoebeanh"><img src="./photos/github.png"></a>
-                <a href="https://www.linkedin.com/in/phoebe-ngo/"><img src="./photos/linkedin.png"></a>
-            </span>
-            
-        </div>
-        <div class="splash-right">
-            <img class="splash-photo" src="https://github.com/phoebeanh/CS601_HW3_Ngo/blob/main/photos/Me.png?raw=true">
+        <div class="main-content">
+        
+            <!--Splash Page-->
+            <div class="splash-content">
+                <div class="splash-left">
+                    <span class="splash-container">
+                        <h1 class="splash-header">Hi, I'm Phoebe.</h1>
+                        <h4>Full Stack Software Developer</h4>
+                        <span class="splash-icons">
+                            <a href="https://github.com/phoebeanh"><img src="./photos/github.png"></a>
+                            <a href="https://www.linkedin.com/in/phoebe-ngo/"><img src="./photos/linkedin.png"></a>
+                            <a href="https://pngo.itch.io/"><img src="./photos/itchio.png"></a>
+                        </span>
+                        
+                    </span>
+                    
+                </div>
+                <div class="splash-right">
+                    <img class="splash-photo" src="https://github.com/phoebeanh/CS601_HW3_Ngo/blob/main/photos/Me.png?raw=true">
+                </div>
+            </div>
+
+            <!--About Me Page-->
+            <div class="about-content">  
+                <div class="about-inner-container">
+                    <img class="about-img" 
+                    alt="A picture of Phoebe sitting in front of a canyon at Zion National Park. She is wearing a green backpack and a grey jacket."
+                    src="https://phoebeferrata.files.wordpress.com/2021/05/img_6834.jpg" height="450" width="350">
+                    <h1>Welcome.</h1>
+                    <span>
+                        <p>
+                            My name is Phoebe Ngo. I am a full stack software developer based out of Seattle, WA. I have been a professional software engineer since 2019 and have worked 
+                            in a variety of team configurations, enterprise frameworks, as well as small startup-like environments. I have developed on huge enterprise level Java applications 
+                            as well as everything to small agile web applications.
+                        </p>
+                        <p>
+                            I finished my Masters of Science in Software Development in May 2023, and am passionate about creating value that is meaningful, has real-world impact, and provides joy 
+                            to its users.
+                        </p>
+                    </span>
+                </div>
+
+            </div>
+
+            <!--Portfolio Page-->
+            <div class="portfolio-content">
+                <h2>Design Portfolio</h2>
+                <label>Coming soon</label>
+                <div id="picture-modal">
+                    <picture-modal :src="src" :caption="caption" v-show="showModal" @close="showModal = false"></picture-modal>
+                </div>
+                <h2>Design Portfolio</h2>
+                <label>Coming soon</label>
+                <div id="picture-modal">
+                    <picture-modal :src="src" :caption="caption" v-show="showModal" @close="showModal = false"></picture-modal>
+                    
+                </div>
+            </div>
+
         </div>
     </main>
     <footer>
-        <label>Phoebe Ngo 2022.</label> 
+        <label>©2023 Phoebe Ngo</label> 
         <label>Icons from <a href="https://icons8.com/license">Icons8</a>.</label>
     </footer>
 </body>

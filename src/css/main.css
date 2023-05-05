@@ -7,7 +7,7 @@ head {
 body {
     margin: 0;
     background-color: #fcfcfc;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Arial, "Montserrat-Regular", sans-serif;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -34,6 +34,7 @@ h2, h3 {
 }
 
 header {
+    box-sizing: border-box;
     padding: 4px;
     max-height: 50px;
     background: #a18eb4;
@@ -42,7 +43,41 @@ header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    z-index: 2;
 }
+
+/*------------ Main & Footer------------*/
+main {
+    box-sizing: border-box;
+    display: block;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow-y: auto;
+    transition: opacity .2s ease-in-out;
+}
+
+.main-content {
+    max-width: 100vw;
+    height: 100%;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+footer {
+    box-sizing: border-box;
+    display: block;
+    position: fixed;
+    font-style: italic;
+    bottom: 0;
+    right: 0;
+    color: white;
+}
+
+
 
 /*------------ Navigation--------------*/
 nav {
@@ -66,18 +101,6 @@ nav a:hover {
     color: #756486;
 }
 
-/*------------ Portfolio Gallery ------------*/
-.portfolio-gallery {
-    display: flex;
-    flex-wrap: wrap;
-    list-style: none;
-}
-
-.portfolio-gallery img {
-    max-width: 350px;
-    padding-right: 2em;
-}
-
 /*------------ Table ------------*/
 table {
     margin: 16px;
@@ -93,25 +116,6 @@ td {
     font-weight: bold;
 }
 
-/*------------ Main & Footer------------*/
-main, footer, nav {
-    margin: 8px;
-}
-
-main {
-    flex: 1 1 0;
-    flex-wrap: wrap;
-}
-
-footer {
-    flex: 0 0 content;
-    flex-direction: column;
-    display: flex;
-    align-items: flex-end;
-    font-style: italic;
-    bottom: 0;
-    right: 0;
-}
 
 /*------------ Images------------*/
 
@@ -129,19 +133,18 @@ footer {
     max-height: 270px;
 }
 
-/*------------ About Me------------*/
-
-.about-content {
-    padding: 8px;
-    display: flex;
-    flex-flow: row;
-}
-
 /*------------ Splash Screen------------*/
 
+.splash-content {
+    opacity: 1;
+    z-index: 2;
+}
+
 .splash-left {
+    position: absolute;
     width: 50%;
     min-height: 100%;
+    margin-left: 12px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -181,30 +184,42 @@ footer {
     z-index: 1;
 }
 
-/*------------ Articles------------*/
-.card {
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-  background-color: #f3f3f3;
-  transition: 0.3s ease-in-out;
-  border-radius: 6px;
-  padding: 2px 12px;
-  margin: 16px;
+/*------------ About Me------------*/
+
+.about-content {
+    display: none;
+    opacity: 0;
+    max-width: 100vw;
+    height: 100%;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: flex-start;
 }
 
-.card a {
-    text-decoration: none;
+.about-inner-container {
+    margin-left: 30px;
+    font-size: .9em;
+    font-weight: 100;
+    line-height: 1.6;
 }
 
-.card h2:hover {
-    transition: 0.3s;
-    color: #d7c1ed;
-}
-
-.card img {
-    width: 30px;
+.main-container .main-container-inner {
+    width: 100vw;
+    max-width: 1280px;
+    box-sizing: border-box;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 7.5px;
+    display: flex;
+    position: relative;
 }
 
 /*------------ Portfolio------------*/
+
+.portfolio-content {
+    display: none;
+    opacity: 0;
+}
 
 .portfolio-grid {
     display: grid;
@@ -253,28 +268,67 @@ footer {
     display: flex;
     justify-content: center;
     align-items: stretch;
-  }
+}
+
+
+/*------------COMING SOON-------*/
+
+.coming-soon {
+    position: absolute;
+    width: 100%;
+    min-height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 48px;
+}
 
 /*------------ Media------------*/
 
-/* On screens that are 1100px or less, set display to block*/
-@media screen and (max-width:1100px) {
-    div.intro, div.about-content {
+@media screen and (min-width:900) {
+    main {
         display: block;
-        overflow: hidden
+        position: fixed;
     }
 }
 
 /*Tablets*/
-@media screen and (max-width:800px) {
-    div.intro, div.about-content {
-        display: block;
+@media screen and (max-width:899px) {
+
+    header .splash-header {
+        color: white;
+    }
+
+    .splash-header {
+        box-sizing: border-box;
+        padding: 4px;
+        min-height: 20px;
+        max-height: 50px;
+        color: #a18eb4;
     }
 
     .splash-left .splash-header {
-        font-size: 48px;
+        font-size: 38px;
         margin-bottom: 0;
     }
+
+    .splash-container {
+        background: rgba(255, 255, 255, 0.7);
+        padding: 8px;
+        border-radius: 25px;
+    }
+
+    .splash-icons {
+        display: flex;
+        justify-content: end;
+    }
+
+    main, .splash-left, .splash-right, .splash-photo {
+        position:absolute;
+        width: 100%;
+        margin-left: 0;
+    }
+
 
     h1 {
         max-height: 15vh;
@@ -288,10 +342,19 @@ footer {
 }
 
 /* Mobile*/
-@media screen and (max-width:450px) {
-    div.intro, div.about-content {
-        display: block;
-        overflow: hidden
+@media screen and (max-width:690px) {
+
+    .splash-header {
+        box-sizing: border-box;
+        padding: 4px;
+        min-height: 20px;
+        max-height: 50px;
+    }
+
+    main, .splash-left, .splash-right, .splash-photo {
+        position:absolute;
+        width: 100%;
+        margin-left: 0;
     }
 
     h1 {
@@ -302,19 +365,4 @@ footer {
         font-size: 32px;
         margin-bottom: 0;
     }
-
-    .portfolio-gallery {
-        display: grid;
-        flex-wrap: nowrap;
-        grid-gap: .5rem;
-    }
-
-    .portfolio-gallery img {
-        max-width: 250px;
-    }
-
-    iframe {
-        max-width: 350px;
-    }
 }
-
