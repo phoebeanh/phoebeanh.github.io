@@ -8,6 +8,9 @@
     <script src="https://unpkg.com/vue@next"></script>
     <!--Importing Javascript-->
     <script src="./src/main.js" type="module"></script>
+    <!--Importing Font Awesome-->
+    <script src="https://kit.fontawesome.com/def827014d.js" crossorigin="anonymous"></script>
+
     <title>Phoebe Ngo</title>
 </head>
 <body> 
@@ -21,7 +24,7 @@
         <div class="main-content">
         
             <!--Splash Page-->
-            <div class="splash-content">
+            <div id="home" class="splash-content">
                 <div class="splash-left">
                     <span class="splash-container">
                         <h1 class="splash-header">Hi, I'm Phoebe.</h1>
@@ -31,7 +34,6 @@
                             <a href="https://www.linkedin.com/in/phoebe-ngo/"><img src="./photos/linkedin.png" alt="linked in"></a>
                             <a href="https://pngo.itch.io/"><img src="./photos/itchio.png" alt="itch.io"></a>
                         </span>
-                        
                     </span>
                     
                 </div>
@@ -41,7 +43,7 @@
             </div>
 
             <!--About Me Page-->
-            <div class="about-content">  
+            <div id="about" class="about-content">  
                 <div class="about-inner-container">
                     <img class="about-img" 
                     alt="A picture of Phoebe sitting in front of a canyon at Zion National Park. She is wearing a green backpack and a grey jacket."
@@ -63,7 +65,7 @@
             </div>
 
             <!--Portfolio Page-->
-            <div class="portfolio-content">
+            <div id="portfolio" class="portfolio-content">
                 <h2>Design Portfolio</h2>
                 <label>Coming soon</label>
                 <div id="picture-modal">
@@ -80,8 +82,9 @@
         </div>
     </main>
     <footer>
-        <label>©2023 Phoebe Ngo</label> 
+        <p> 2023 © Phoebe Ngo.
         <label>Icons from <a href="https://icons8.com/license">Icons8</a>.</label>
+        </p>
     </footer>
 </body>
 </html>

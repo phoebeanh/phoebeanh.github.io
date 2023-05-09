@@ -3,16 +3,32 @@ export default {
     props: {
       headerClass: String
     },
+    methods: {
+      toggle: function() {
+        const hamburger = document.querySelector(".hamburger");
+        const navMenu = document.querySelector(".nav-menu");
+
+        hamburger.classList.toggle("active");
+        navMenu.classList.toggle("active");
+      }
+    },
     template: `
         <header :class="headerClass">
-          <h1 :class="headerClass">Phoebe Ngo</h1>
+          <h1><a :class="headerClass" href="../../index.html">Phoebe Ngo</a></h1>
           <!--Navigation Bar-->
           <nav>
-            <a href="../index.html">Home</a>
-            <a href="/src/coming-soon.html">About</a>
-            <a href="/src/coming-soon.html">My Projects</a>
-            <a href="/src/coming-soon.html">Resume</a>
+            <ul class="nav-menu">
+              <li class="nav-item"><a href="../../index.html">Home</a> </li>
+              <li class="nav-item"><a href="/src/coming-soon.html">About</a> </li>
+              <li class="nav-item"><a href="/src/coming-soon.html">Projects</a> </li>
+              <li class="nav-item"><a href="/src/coming-soon.html">Resume</a> </li>
+            </ul>
           </nav>
+          <div v-on:click="toggle()" class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </div>
         </header>`
         
 }

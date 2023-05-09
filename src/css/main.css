@@ -14,11 +14,26 @@ body {
     
 }
 
+a {
+    text-decoration: none;
+}
+
+.icon {
+    width: 30px;
+    height: 30px;
+}
+
+.icon:hover, .light {
+    color: #fcfcfc;
+    transition: opacity .2s ease-in-out;
+}
+
 /*------------ Headers------------*/
-header h1 {
+header a {
     padding: 0;
-    height: auto;
     color: white;
+    height: auto;
+    text-decoration: none;
     background: none;
     align-items: center;
     align-self: center;
@@ -29,7 +44,7 @@ header h1 {
     background: none;
 }
 
-h2, h3 {
+h2, h3, .lavender {
     color: #a18eb4;
 }
 
@@ -41,9 +56,53 @@ header {
     position: sticky;
     top:0;
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
+    align-items: center;
     z-index: 2;
+}
+
+/*------------ Navigation--------------*/
+
+.nav-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hamburger {
+    display: none;
+}
+
+
+nav {
+    background: none;
+}
+
+li {
+    list-style: none;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: white;
+}
+
+nav a {
+    background: none;
+    color: #fcfcfc;
+    font: menu;
+    padding: 8px;
+    font-size: 16px;
+}
+
+nav a:hover, .splash-header h1 a:hover {
+    transition: opacity 0.2s ease-in-out;
+    color: #756486;
 }
 
 /*------------ Main & Footer------------*/
@@ -69,37 +128,19 @@ main {
 
 footer {
     box-sizing: border-box;
-    display: block;
+    width: 100%;
+    display: flex;
+    justify-content: right;
     position: fixed;
-    font-style: italic;
     bottom: 0;
     right: 0;
     color: white;
+    background-color: #756486;
 }
 
 
 
-/*------------ Navigation--------------*/
-nav {
-    background: none;
-    flex-direction: row;
-    align-items: center;
-    align-self: center;
-    max-height: 15px;
-}
 
-nav a {
-    background: none;
-    color: #fcfcfc;
-    font: menu;
-    text-decoration: none;
-    padding: 8px;
-    font-size: 12px;
-}
-
-nav a:hover {
-    color: #756486;
-}
 
 /*------------ Table ------------*/
 table {
@@ -286,9 +327,19 @@ td {
 /*------------ Media------------*/
 
 @media screen and (min-width:900) {
+
+
     main {
         display: block;
         position: fixed;
+    }
+
+    .nav-menu {
+        display: block;
+    }
+
+    .mobile-nav {
+        display:none;
     }
 }
 
@@ -297,6 +348,50 @@ td {
 
     header .splash-header {
         color: white;
+    }
+
+    .hamburger {
+        display: block;
+        cursor: pointer;
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .nav-menu {
+        position: fixed;
+        flex-direction: column;
+        top: 2.3rem;
+        right: -200%;
+        width: 100%;
+        border-radius: 10px;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow:
+            0 10px 27px rgba(0, 0, 0, 0.05);
+    }
+
+    .nav-item a {
+        color: #a18eb4;
+    }
+
+    .nav-item:hover {
+        transition: opacity 0.2s ease-in-out;
+        color: white;
+    }
+
+    .nav-menu.active {
+        right: 0;
+        background-color: rgb(255,255,255,0.5)
     }
 
     .splash-header {

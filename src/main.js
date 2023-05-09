@@ -1,5 +1,5 @@
 const {createApp} = Vue
-import NavigationBar from './components/NavigationBar.js'
+import NavigationBar from './components/NavigationBar.js';
 
 //navigation bar
 createApp({
